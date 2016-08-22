@@ -1,10 +1,13 @@
 # --- WIREMOCK ---
 
-FROM ekino/java7
+FROM anapsix/alpine-java:8
 MAINTAINER fronton@ekino.com
 
+RUN apk add --update curl && \
+    rm -rf /var/cache/apk/*
+
 ENV WM_PACKAGE wiremock
-ENV WM_VERSION 1.55
+ARG WM_VERSION=1.55
 
 RUN mkdir /$WM_PACKAGE
 WORKDIR /$WM_PACKAGE

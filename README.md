@@ -1,6 +1,6 @@
 # ekino/wiremock
 
-[![Circle CI](https://circleci.com/gh/ekino/docker-wiremock.svg?style=svg)](https://circleci.com/gh/ekino/docker-wiremock)
+[![Travis CI][travis-image]][travis-url]
 
 ## Description
 
@@ -27,4 +27,7 @@ docker run -d \
 # use it
 curl http://127.0.0.1/hello
 ```
+
+[travis-image]: https://img.shields.io/travis/ekino/docker-wiremock.svg?style=flat-square
+[travis-url]: https://travis-ci.org/ekino/docker-wiremock
 

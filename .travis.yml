@@ -1,0 +1,21 @@
+sudo: required
+
+language: c
+
+services:
+  - docker
+
+before_install:
+  - docker info
+  - docker build -t ekino/wiremock:$WM_VERSION ./$WM_VERSION
+
+env:
+  - WM_VERSION=1
+  - WM_VERSION=2
+
+script:
+  - docker run -d --name wiremock -v $(readlink -f files):/wiremock/__files -v $(readlink -f mappings):/wiremock/mappings ekino/wiremock:$WM_VERSION
+  - sleep 2
+  - docker logs wiremock
+  - docker exec wiremock curl -sS http://localhost:8080/hello
+  - docker rm -f wiremock
