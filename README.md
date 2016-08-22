@@ -6,6 +6,11 @@
 
 Docker image to easily start a [wiremock](http://wiremock.org/) container
 
+## Tags and Dockerfile links
+
+- [`2.1.11`, `2`, `latest` (2/Dockerfile)](https://github.com/ekino/docker-wiremock/blob/master/2/Dockerfile)
+- [`1.55`, `1` (1/Dockerfile)](https://github.com/ekino/docker-wiremock/blob/master/1/Dockerfile)
+
 ## Usage
 
 #### Start
