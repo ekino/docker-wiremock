@@ -12,6 +12,7 @@ before_install:
 env:
   - WM_VERSION=1
   - WM_VERSION=2
+  - WM_VERSION=2-ssh
 
 script:
   - docker run -d --name wiremock -v $(readlink -f files):/wiremock/__files -v $(readlink -f mappings):/wiremock/mappings ekino/wiremock:$WM_VERSION
