@@ -7,7 +7,7 @@ RUN apk add --update curl && \
     rm -rf /var/cache/apk/*
 
 ENV WM_PACKAGE wiremock
-ARG WM_VERSION=2.1.11
+ARG WM_VERSION=2.7.1
 
 RUN mkdir /$WM_PACKAGE
 WORKDIR /$WM_PACKAGE
