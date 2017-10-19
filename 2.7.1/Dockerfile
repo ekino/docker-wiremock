@@ -15,4 +15,5 @@ RUN curl -sSL -o $WM_PACKAGE.jar https://repo1.maven.org/maven2/com/github/tomak
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","wiremock.jar"]
+ENTRYPOINT java -jar wiremock.jar $WM_ARGS
+
